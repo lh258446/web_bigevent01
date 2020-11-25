@@ -39,7 +39,7 @@ $(function () {
         //发送ajax
         $.ajax({
             method: 'post',
-            url: '/api/login',
+            url: '/api/reguser',
             data: {
                 username:$('.reg-box [name=username]').val(),
                 password:$('.reg-box [name=password]').val()
