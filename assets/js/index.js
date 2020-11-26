@@ -1,19 +1,19 @@
 //入口函数
 $(function () {
     //1.获取用户信息
-    getuserInof() 
+    getuserInof()
     //2.退出功能
     var layer = layui.layer
     $('#btnLogout').on('click', function () {
         //框架提供的询问框
-        layer.confirm('是否确认退出?', {icon: 3, title:'提示'}, function(index){
-           //清除本地存储'token'
+        layer.confirm('是否确认退出?', { icon: 3, title: '提示' }, function (index) {
+            //清除本地存储'token'
             localStorage.removeItem('token')
             //跳转页面
             location.href = '/login.html'
             //关闭询问框
             layer.close(index)
-          });
+        });
     })
 })
 //获取用户信息(封装到入口函数外面)
@@ -46,7 +46,7 @@ function renderAvatar(user) {
     if (user.user_pic !== null) {
         //有头像
         $('.layui-nav-img').show().attr('src', user.user_pic)
-        $('.user-avatar').hide()
+        $('.text-avatar').hide()
     } else {
         //没有头像
         $('.layui-nav-img').hide()
